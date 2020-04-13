@@ -78,10 +78,6 @@ body {
     max-width: 380px;
     height: 380px;
   } 
-
-  .containerCss{
-    /* display: flex; */
-  }
   
   .details {
       padding: 10px;
