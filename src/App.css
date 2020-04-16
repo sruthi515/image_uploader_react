@@ -28,12 +28,12 @@ body {
   
   .uploadInput {
     padding: 10px;
-    margin: 10px 350px;
+    margin: 10px 360px;
       border: 1px solid #ccc;
       /* background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%); */
       background: linear-gradient(135deg, #a0b2dc 20%, #a2a1e8 80%);
       color: #fff;
-      max-width: 500px;
+      max-width: 450px;
       box-shadow: 2px 2px 5px 2px hsla(0, 0%, 0%, 0.15);
   }
   
