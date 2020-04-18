@@ -33,5 +33,5 @@ function dragHandler(state = false, action) {
    }
 }
 const uploadReducer = combineReducers({ files_info: fileHandler,
-                                           isDragging: dragHandler })
+                                        isDragging: dragHandler })
 export default uploadReducer
