@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import '../../src/App.css';
 
 class ImageHolder extends Component {
@@ -9,27 +8,27 @@ class ImageHolder extends Component {
     return (
         <div className="imagePreviewContainer">
             {
-                this.props.urlsProp && (this.props.urlsProp.map((url, i) => (
+                this.props.files_info && (this.props.files_info.map((file_details, i) => (
                     <div className='containerCss'>
                     
                         <div className="previewItem">
                             <p>Horizontal View</p>
-                            <img className="horizontalImagePreview" src={url} alt='img'/>
+                            <img className="horizontalImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
                             <p>Vertical View</p>
-                            <img className="verticalImagePreview" src={url} alt='img'/>
+                            <img className="verticalImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
                             <p>Horizontal Small View</p>
-                            <img className="horizontalSmallImagePreview" src={url} alt='img'/>
+                            <img className="horizontalSmallImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
                             <p>Gallery View</p>
-                            <img className="galleryImagePreview" src={url} alt='img'/>
+                            <img className="galleryImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                     </div>

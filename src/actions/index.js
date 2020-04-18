@@ -1,52 +1,41 @@
 export const UPLOAD_IMAGE = 'UPLOAD_IMAGE'
 export const DRAG_LEAVE = 'DRAG_LEAVE'
-export const DRAGS = 'DRAGS'
-export const ON_DROP = 'ON_DROP'
-export const DROP = 'DROP'
-export const FILES = 'FILES'
-
+export const DRAG_ENTER = 'DRAG_ENTER'
+export const DRAG_OVER = 'DRAG_OVER'
+export const REMOVE = 'REMOVE'
 
 let nextimgId = 0;
 
-export function uploadImage(img) {
+export function uploadImage(file, url) {
    return {
       type: UPLOAD_IMAGE,
       id: nextimgId++,
-      img
+      file,
+      url
    };
 }
 
-export function dragLeaveAction(){
+export function dragLeave(){
    return {
-      type: DRAG_LEAVE,
-      id: nextimgId++
+      type: DRAG_LEAVE
    };
 }
 
-export function dragsAction(){
+export function dragEnter(){
    return {
-      type: DRAGS,
-      id: nextimgId++
+      type: DRAG_ENTER
    };
 }
 
-export function onDropAction(){
+export function drogOver(){
    return {
-      type: ON_DROP,
-      id: nextimgId++
+      type: DRAG_OVER
    };
 }
 
-export function dropAction(){
+export function remove(id){
    return {
-      type: DROP,
-      id: nextimgId++
-   };
-}
-
-export function handleFilesAction(){
-   return {
-      type: FILES,
-      id: nextimgId++
+      type: REMOVE,
+      id
    };
 }
