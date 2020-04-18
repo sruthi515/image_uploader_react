@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  
+  @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+  
+  html {
+      height: 100%;
+  }
+  
+  body {
+    /* background: linear-gradient(135deg, #2a99ef 20%, #52d9e5 80%); */
+    background:#ebeded;
+      background-repeat: no-repeat;
+  }
+  
+  .uploadInput {
+    padding: 10px;
+    margin: 10px 360px;
+      border: 1px solid #ccc;
+      /* background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%); */
+      background: linear-gradient(135deg, #a0b2dc 20%, #a2a1e8 80%);
+      color: #fff;
+      max-width: 450px;
+      box-shadow: 2px 2px 5px 2px hsla(0, 0%, 0%, 0.15);
+  }
+  
+  .imagePreviewContainer {
+      display: flex;
+      padding: 10px;
+      flex: 1 1 100vw;
+      flex-flow: row wrap;
+  }
+  
+  .previewItem {
+      /* display: flex;
+      margin: 10px; */
+      margin: 10px 350px;
+      padding: 10px;
+      flex: 0 0 350px;
+      background: #fff;
+      box-shadow: 1px 2px 5px 0px hsla(0, 0%, 0%, 0.35);
+  }
+  
+  .imagePreview {
+      max-width: 150px;
+      height: 150px;
+  }
+  
+  .horizontalImagePreview{
+    max-width: 755px;
+    height: 450px;
+  }
+  
+  .verticalImagePreview{
+    max-width: 365px;
+    height: 450px;
+  }
+
+  .horizontalSmallImagePreview{
+    max-width: 365px;
+    height: 212px;
+  } 
+
+  .galleryImagePreview{
+    max-width: 380px;
+    height: 380px;
+  } 
+  
+  .details {
+      padding: 10px;
+  }
+  
+  .details h6 {
+      font-size: 10pt;
+      fong-weight: normal;
+      color: #999;
+      padding: 5px;
+      margin: 0;
+  }
+  
+  .details i {
+      cursor: pointer;
+  }
+  
+  .dragDrop {
+      margin-top: 10px;
+      height: 100px;
+      background: hsla(0, 0%, 100%, 0.25);
+      padding: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ddd;
+      border: 2px dashed #eee;
+  }
+  
+  .dragging {
+      background-color: #fff;
+      color: lightsteelblue;
+  }
+  
+  .dragging i.material-icons {
+      animation: bounce 1s infinite ease-in-out;
+  }
+  
+  .inside {
+      margin-top: 35px;
+  }
+  
+  @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+      100% { transform: translateY(0); }
+  }

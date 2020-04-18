@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../../src/App.css';
+import { connect } from 'react-redux';
 
-class ImageHolder extends Component {
+class ImagePreview extends Component {
   
   render() {
     
@@ -12,22 +12,22 @@ class ImageHolder extends Component {
                     <div className='containerCss'>
                     
                         <div className="previewItem">
-                            <p>Horizontal View</p>
+                            <p>Horizontal View (755 x 450)</p>
                             <img className="horizontalImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
-                            <p>Vertical View</p>
+                            <p>Vertical View (365 x 450)</p>
                             <img className="verticalImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
-                            <p>Horizontal Small View</p>
+                            <p>Horizontal Small View (365 x 212)</p>
                             <img className="horizontalSmallImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
                         <div className="previewItem">
-                            <p>Gallery View</p>
+                            <p>Gallery View (380 x 380)</p>
                             <img className="galleryImagePreview" src={file_details.url} alt='img'/>
                         </div>
 
@@ -39,4 +39,11 @@ class ImageHolder extends Component {
   }
 }
 
-export default ImageHolder;
+function mapStateToProps(state) {
+    return {
+        files_info: state.files_info,
+        isDragging: state.isDragging
+    }
+}
+
+export default connect(mapStateToProps)(ImagePreview);

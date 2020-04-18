@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { uploadImage, dragEnter, dragLeave, drogOver } from '../actions';
-import ImageHolder from './imageHolder';
-import '../../src/App.css';
+import { uploadImage, dragEnter, dragLeave, drogOver } from '../../actions';
 
-class Uploader extends Component {
+class ImageUploader extends Component {
 
     constructor(props){
         super(props);
@@ -61,7 +59,7 @@ class Uploader extends Component {
             image.onload = async function() {
                 var imageUrl = window.URL.createObjectURL(file);
                 if(this.width !== 225 && this.height !== 225){
-                alert("Sorry, Not able to upload image size should be 1024 x 1024 ");
+                    alert("Sorry, Image resolution should be 1024 x 1024 ");
                 } else {
                     self.props.uploadImage(file, imageUrl);
                 }
@@ -96,16 +94,8 @@ class Uploader extends Component {
                     </div>
                 </div>
             </div> 
-            <ImageHolder files_info = {this.props.files_info} ></ImageHolder>
         </div>
         );
-    }
-}
-
-function mapStateToProps(state) {
-    return {
-        files_info: state.files_info,
-        isDragging: state.isDragging
     }
 }
 
@@ -118,4 +108,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Uploader);
+export default connect(null, mapDispatchToProps)(ImageUploader);

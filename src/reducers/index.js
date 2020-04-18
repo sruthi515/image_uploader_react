@@ -4,11 +4,11 @@ import { UPLOAD_IMAGE, DRAG_LEAVE, DRAG_ENTER, DRAG_OVER, REMOVE  } from '../act
  function fileHandler(state = [], action) {
    switch (action.type) {
       case UPLOAD_IMAGE:
-         return [...state, {
-                     id: action.id,
-                     file: action.file,
-                     url: action.url
-                }]
+         return [{
+            id: action.id,
+            file: action.file,
+            url: action.url
+         }, ...state]
 
       case REMOVE:
             return state.filter.filter((file_details) => file_details.id !== action.id)
