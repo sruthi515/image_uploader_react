@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { UPLOAD_IMAGE, DRAG_LEAVE, DRAG_ENTER, DRAG_OVER, REMOVE  } from '../actions'
+import { UPLOAD_IMAGE, DRAG_LEAVE, DRAG_ENTER, DRAG_OVER  } from '../actions'
 
  function fileHandler(state = [], action) {
    switch (action.type) {
@@ -9,9 +9,6 @@ import { UPLOAD_IMAGE, DRAG_LEAVE, DRAG_ENTER, DRAG_OVER, REMOVE  } from '../act
             file: action.file,
             url: action.url
          }, ...state]
-
-      case REMOVE:
-            return state.filter.filter((file_details) => file_details.id !== action.id)
 
       default: return state;
    }

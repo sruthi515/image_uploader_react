@@ -58,7 +58,8 @@ class ImageUploader extends Component {
             image.src = theFile.target.result;
             image.onload = async function() {
                 var imageUrl = window.URL.createObjectURL(file);
-                if(this.width !== 225 && this.height !== 225){
+                console.log("width,height::",this.width,this.height);
+                if(this.width !== 1024 && this.height !== 1024){
                     alert("Sorry, Image resolution should be 1024 x 1024 ");
                 } else {
                     self.props.uploadImage(file, imageUrl);
